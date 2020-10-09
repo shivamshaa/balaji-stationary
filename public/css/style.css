@@ -615,6 +615,10 @@ ul {
     margin-top: 72px;
   }
 }
+/* .logo{
+  max-height: 5px;
+  max-width: 7px;
+} */
 
 /* line 10, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_banner.scss */
 .home_banner_area.banner-area {
@@ -976,7 +980,7 @@ ul {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 1318px;
+  height: 1328px;
   background: #262533;
   z-index: -1;
 }
@@ -5013,10 +5017,10 @@ h6 {
   position: relative;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 919px) {
   /* line 6, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_footer.scss */
   .footer-area {
-    margin-top: 100px;
+    margin-top: 00px;
   }
 }
 
@@ -5028,6 +5032,7 @@ h6 {
   right: 0px;
   bottom: 0px;
   height: 582px;
+  margin-bottom: 0px;
   background: #262533;
 }
 

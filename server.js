@@ -29,12 +29,16 @@ let mailTransporter = nodemailer.createTransport({
 app.post("/data",(req,res)=>{
    
     console.log(req.body.desig);
-    let txt = 'hello' + req.body.desig + 'how '
+    let txt = 'Dear' + req.body.fname + req.body.lname + 'your requested quotation for our product is attached in this mail' + 'your details as entered are' + 'phone: '+ req.body.phone
+            + 'email: ' + req.body.email + 'company name: ' + req.body.cname + 'company address: '+ req.body.cloc + 'designation: ' + req.body.desig +
+            'requested quote: link'
     let mailDetails = { 
         from: 'shaagupta04@gmail.com', 
         to: req.body.email, 
         subject: 'Test mail', 
-        text: 'Some random link'
+        text: 'Dear ' + req.body.fname + req.body.lname + ' your requested quotation for our product is attached in this mail ' + 'your details as entered are ' + 'phone: '+ req.body.phone
+        + ' email: ' + req.body.email + ' company name: ' + req.body.cname + ' company address: '+ req.body.cloc + ' designation: ' + req.body.desig +
+        ' requested quote: link'
     }; 
     mailTransporter.sendMail(mailDetails, function(err, data) { 
         if(err) { 
