@@ -961,40 +961,51 @@ ul {
 /* Start Service Area
 =========================================================================================== */
 /* line 149, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-.service-area {
+.service-area,service-area1 {
   position: relative;
   margin-bottom: 120px;
 }
 
 @media (max-width: 991px) {
   /* line 149, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-  .service-area {
+  .service-area,service-area1 {
     margin-bottom: 70px;
   }
 }
 
 /* line 155, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
+.service-area1:after{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2740px;
+  background: #262533;
+  z-index: -1;
+
+}
 .service-area:after {
   content: '';
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 1328px;
+  height: 1318px;
   background: #262533;
   z-index: -1;
 }
 
 @media (max-width: 991px) {
   /* line 155, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-  .service-area:after {
+  .service-area,service-area1:after {
     height: 1817px;
   }
 }
 
 @media (max-width: 767px) {
   /* line 155, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-  .service-area:after {
+  .service-area,service-area1:after {
     height: 2174px;
   }
 }
@@ -1031,7 +1042,7 @@ ul {
 }
 
 /* line 193, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-.single-service h3,h4 {
+.single-service h3 {
   color: #ffffff;
   font-size: 21px;
   font-weight: 400;
@@ -1042,7 +1053,8 @@ ul {
 
 @media (max-width: 991px) {
   /* line 200, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-  .single-service h3,h4 {
+  .single-service h3
+  {
     display: none;
   }
 }
@@ -1083,7 +1095,7 @@ ul {
 }
 
 /* line 234, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-.single-service:hover h3,h4 {
+.single-service:hover h3{
   color: #e72727;
 }
 
@@ -2203,7 +2215,7 @@ ul {
 }
 
 /* line 342, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_blog.scss */
-.blog_item_img .blog_item_date h3,h4 {
+.blog_item_img .blog_item_date h3 {
   font-size: 22px;
   font-weight: 600;
   color: #ffffff;
@@ -2213,7 +2225,7 @@ ul {
 
 @media (min-width: 768px) {
   /* line 342, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_blog.scss */
-  .blog_item_img .blog_item_date h3,h4 {
+  .blog_item_img .blog_item_date h3 {
     font-size: 30px;
   }
 }
@@ -2376,7 +2388,7 @@ ul {
 }
 
 /* line 487, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_blog.scss */
-.blog_right_sidebar .popular_post_widget .post_item .media-body h3,h4 {
+.blog_right_sidebar .popular_post_widget .post_item .media-body h3 {
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 6px;
@@ -3025,13 +3037,13 @@ ul {
 }
 
 /* line 17, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_contact.scss */
-.contact-info .media-body h3,h4 {
+.contact-info .media-body h3{
   font-size: 16px;
   margin-bottom: 0;
 }
 
 /* line 21, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_contact.scss */
-.contact-info .media-body h3,h4 a {
+.contact-info .media-body h3 a {
   color: #262533;
 }
 
