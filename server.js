@@ -35,9 +35,9 @@ app.post("/data",(req,res)=>{
             + 'email: ' + req.body.email + 'company name: ' + req.body.cname + 'company address: '+ req.body.cloc + 'designation: ' + req.body.desig +
             'requested quote: link'
     let mailDetails = { 
-        from: 'shaagupta04@gmail.com', 
+        from: 'balajistationers26@gmail.com', 
         to: req.body.email, 
-        subject: 'Test mail', 
+        subject: 'Balaji Stationers Quotation', 
         text: 'Dear ' + req.body.fname +' '+ req.body.lname + ' your requested quotation for our products is attached in this mail, ' + 'your details as entered are ' + 'Phone No.: '+ req.body.phone
         + ' Email Address: ' + req.body.email + ' Company Name: ' + req.body.cname + ' Company Location: '+ req.body.cloc + ' Designation: ' + req.body.desig +
         ' Requested Quote: https://drive.google.com/drive/folders/1euOjeEnZMroDPiWRewx4IXbFs1olwW_r?usp=sharing'
