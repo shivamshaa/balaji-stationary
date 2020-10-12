@@ -51,7 +51,6 @@ app.post("/data",(req,res)=>{
         } 
     }); 
     // res.send("received");
-    
 })
 
 app.get("/",(req,res)=>{
