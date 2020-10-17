@@ -2,7 +2,13 @@ const express=require("express");
 const bodyParser=require("body-parser");
 const ejs = require('ejs');
 const nodemailer = require('nodemailer'); 
+const mongoose = require('mongoose');
 
+mongoose.connect("mongodb+srv://admin-amit:amitbhattacharjee@balaji-stationers.gywpu.mongodb.net/Balaji-stationers?retryWrites=true&w=majority",{useNewUrlParser: true,useUnifiedTopology: true,useFindAndModify: false}).then(()=>{
+    console.log("database connected");
+}).catch((e)=>{
+    console.log(e);
+});
 
 const app = express();
 app.set('view engine', 'ejs');
