@@ -961,14 +961,14 @@ ul {
 /* Start Service Area
 =========================================================================================== */
 /* line 149, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-.service-area,service-area1 {
+.service-area,service-area1,service-area2 {
   position: relative;
   margin-bottom: 120px;
 }
 
 @media (max-width: 991px) {
   /* line 149, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-  .service-area,service-area1 {
+  .service-area,service-area1,service-area2 {
     margin-bottom: 70px;
   }
 }
@@ -994,6 +994,17 @@ ul {
   height: 1330px;
   background: #262533;
   z-index: -1;
+}
+.service-area2:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 550px;
+  background: #262533;
+  z-index: -1;
+
 }
 
 @media (max-width: 991px) {
@@ -1597,7 +1608,7 @@ ul {
 }
 
 /* line 592, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-.cta_inner h1 {
+.cta_inner h1,h2 {
   color: #ffffff;
   font-size: 42px;
   font-weight: 400;
@@ -1607,7 +1618,7 @@ ul {
 
 @media (max-width: 991px) {
   /* line 592, /Applications/MAMP/htdocs/naim/color-lib/160 lagoon Logistics/scss/_home.scss */
-  .cta_inner h1 {
+  .cta_inner h1,h2 {
     font-size: 30px;
   }
 }
