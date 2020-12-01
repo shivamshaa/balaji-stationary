@@ -23,7 +23,7 @@ let mailTransporter = nodemailer.createTransport({
     ignoreTLS: true, // add this  
     auth: { 
         user: 'balajistationers26@gmail.com', 
-        pass: '26balaji4986'}
+        pass: '@mitBT123'}
     // } , tls: {
     //     ciphers: 'SSLv3'
     // }

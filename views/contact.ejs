@@ -126,8 +126,17 @@
   <section class="section_gap">
     <div class="container">
       <div class="d-none d-sm-block mb-5 pb-4">
-        <div id="map" style="height: 480px;"></div>
-        <script>
+        <div id="map" style="height: 480px;">
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe width="1080" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Antriksh%20bhawan%2C&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+              </iframe><a href="https://embedgooglemap.net/mapv2/">indie</a>
+            </div>
+            <style>.mapouter{position:relative;text-align:right;height:500px;width:1080px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:1080px;}
+            </style>
+            </div>
+        </div>
+        <!-- <script>
           function initMap() {
             var uluru = { lat: 28.628553, lng: 77.222711 };
             var grayStyles = [
@@ -149,9 +158,10 @@
           }
 
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap"></script>
+        <script src="https://maps.google.com/maps?q=Antriksh%20bhawan%2C&t=&z=13&ie=UTF8&iwloc=&output=embed"></script> -->
 
       </div>
+      
 
       <div class="row">
         <div class="col-12">
