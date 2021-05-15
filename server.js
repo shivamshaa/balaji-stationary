@@ -3,6 +3,7 @@ const bodyParser=require("body-parser");
 const ejs = require('ejs');
 const nodemailer = require('nodemailer'); 
 const mongoose = require('mongoose');
+const expressSitemapXml = require('express-sitemap-xml')
 
 mongoose.connect("mongodb+srv://admin-amit:amitbhattacharjee@balaji-stationers.gywpu.mongodb.net/Balaji-stationers?retryWrites=true&w=majority",{useNewUrlParser: true,useUnifiedTopology: true,useFindAndModify: false}).then(()=>{
     console.log("database connected");
@@ -14,7 +15,11 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
+app.use(expressSitemapXml(getUrls, 'https://bitmidi.com'))
 
+async function getUrls () {
+    return await getUrlsFromDatabase()
+  }
 let mailTransporter = nodemailer.createTransport({ 
     host: 'smtp.gmail.com', //smtp-mail.outlook.com
     port: 465,              //587
@@ -23,7 +28,7 @@ let mailTransporter = nodemailer.createTransport({
     ignoreTLS: true, // add this  
     auth: { 
         user: 'balajistationers26@gmail.com', 
-        pass: '@mitBT123'}
+        pass: '$hivAM123'}
     // } , tls: {
     //     ciphers: 'SSLv3'
     // }
