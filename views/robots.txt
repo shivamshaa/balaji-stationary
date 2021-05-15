@@ -1,4 +1,4 @@
 Sitemap: http://www.balajistationers.com/sitemap.xml
-User-agen: *
+User-agent: *
 Allow: /
 Disallow:
