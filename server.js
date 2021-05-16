@@ -38,6 +38,9 @@ let mailTransporter = nodemailer.createTransport({
 app.get('/sitemap.xml', function(req, res) {
     res.sendFile(path.join(__dirname + '/sitemap.xml'));
   });
+  app.get('/robots.txt', function(req, res) {
+    res.sendFile(path.join(__dirname + '/robots.txt'));
+  });
 app.post("/data",(req,res)=>{
    
     let txt = 'Dear' + req.body.fname +' '+ req.body.lname +  'your requested quotation for our product is attached in this mail' + 'your details as entered are' + 'phone: '+ req.body.phone
