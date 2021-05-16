@@ -3,7 +3,7 @@ const bodyParser=require("body-parser");
 const ejs = require('ejs');
 const nodemailer = require('nodemailer'); 
 const mongoose = require('mongoose');
-const expressSitemapXml = require('express-sitemap-xml')
+const path = require("path");
 
 mongoose.connect("mongodb+srv://admin-amit:amitbhattacharjee@balaji-stationers.gywpu.mongodb.net/Balaji-stationers?retryWrites=true&w=majority",{useNewUrlParser: true,useUnifiedTopology: true,useFindAndModify: false}).then(()=>{
     console.log("database connected");
@@ -15,11 +15,8 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
-app.use(expressSitemapXml(getUrls, 'https://bitmidi.com'))
 
-async function getUrls () {
-    return await getUrlsFromDatabase()
-  }
+
 let mailTransporter = nodemailer.createTransport({ 
     host: 'smtp.gmail.com', //smtp-mail.outlook.com
     port: 465,              //587
@@ -39,7 +36,7 @@ let mailTransporter = nodemailer.createTransport({
 //     res.render('index');
 // })
 app.get('/sitemap.xml', function(req, res) {
-    res.sendFile(path.join(__dirname + 'sitemap.xml'));
+    res.sendFile(path.join(__dirname + '/sitemap.xml'));
   });
 app.post("/data",(req,res)=>{
    
